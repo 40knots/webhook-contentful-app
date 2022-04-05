@@ -102,6 +102,8 @@ class Config extends Component<ConfigProps, ConfigState> {
             buttonText: undefined,
             name: undefined,
             webhookUrl: undefined,
+            authToken: undefined,
+            eventType: undefined,
           },
         ],
       },
@@ -186,6 +188,42 @@ class Config extends Component<ConfigProps, ConfigState> {
                         );
                       }}
                       testId={`webhook-url-input-${index}`}
+                      required
+                    />
+                  </Row>
+                  <Row>
+                    <TextField
+                      name="authToken"
+                      id="authToken"
+                      labelText="Auth Token"
+                      value={webhook.authToken || ''}
+                      onChange={(event) => {
+                        const target = event.target as HTMLInputElement;
+                        this.setWebhookParameter(
+                          index,
+                          target.name,
+                          target.value
+                        );
+                      }}
+                      testId={`auth-token-input-${index}`}
+                      required
+                    />
+                  </Row>
+                  <Row>
+                    <TextField
+                      name="eventType"
+                      id="eventType"
+                      labelText="GitHub Event Type"
+                      value={webhook.eventType || ''}
+                      onChange={(event) => {
+                        const target = event.target as HTMLInputElement;
+                        this.setWebhookParameter(
+                          index,
+                          target.name,
+                          target.value
+                        );
+                      }}
+                      testId={`event-type-input-${index}`}
                       required
                     />
                   </Row>

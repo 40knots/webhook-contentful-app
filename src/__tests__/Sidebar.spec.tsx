@@ -43,6 +43,8 @@ describe('Sidebar', () => {
           name: '',
           webhookUrl: '',
           buttonText: '',
+          authToken: '',
+          eventType: '',
         },
       ];
     });
@@ -68,6 +70,8 @@ describe('Sidebar', () => {
             name: '',
             webhookUrl: '',
             buttonText: 'Custom button text',
+            authToken: '',
+            eventType: '',
           },
         ];
       });
@@ -86,6 +90,8 @@ describe('Sidebar', () => {
               name: '',
               webhookUrl: 'https://www.google.com',
               buttonText: 'Custom button text',
+              authToken: '',
+              eventType: '',
             },
           ];
         });
@@ -158,16 +164,22 @@ describe('Sidebar', () => {
           name: 'Test 1',
           webhookUrl: 'https://www.google.com/search?q=1',
           buttonText: 'Button text 1',
+          authToken: 'token',
+          eventType: 'event',
         },
         {
           name: 'Test 2',
           webhookUrl: 'https://www.google.com/search?q=2',
           buttonText: 'Button text 2',
+          authToken: 'token',
+          eventType: 'event',
         },
         {
           name: 'Test 2',
           webhookUrl: 'https://www.google.com/search?q=3',
           buttonText: 'Button text 3',
+          authToken: 'token',
+          eventType: 'event',
         },
       ];
     });

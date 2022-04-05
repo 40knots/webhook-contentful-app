@@ -169,6 +169,84 @@ exports[`Config When there is a webhook with values Should match snapshot 1`] = 
               >
                 <div
                   class="TextField__TextField___Sf6eo TextField__TextField--full___11DBK"
+                  data-test-id="auth-token-input-0"
+                >
+                  <div
+                    class="TextField__TextField__label-wrapper___2-MJT"
+                  >
+                    <label
+                      class="FormLabel__FormLabel___3d6zQ"
+                      data-test-id="cf-ui-form-label"
+                      for="authToken"
+                    >
+                      Auth Token
+                      <span
+                        class="FormLabel__FormLabel__required-text___3mvdm"
+                      >
+                        (
+                        required
+                        )
+                      </span>
+                    </label>
+                  </div>
+                  <div
+                    class="TextInput__TextInput___36-K- TextInput__TextInput--full___1EJEW"
+                  >
+                    <input
+                      class="TextInput__TextInput__input___27vDB a11y__focus-border--default___60AXp"
+                      data-test-id="cf-ui-text-input"
+                      id="authToken"
+                      name="authToken"
+                      required=""
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-10wjke7"
+              >
+                <div
+                  class="TextField__TextField___Sf6eo TextField__TextField--full___11DBK"
+                  data-test-id="event-type-input-0"
+                >
+                  <div
+                    class="TextField__TextField__label-wrapper___2-MJT"
+                  >
+                    <label
+                      class="FormLabel__FormLabel___3d6zQ"
+                      data-test-id="cf-ui-form-label"
+                      for="eventType"
+                    >
+                      GitHub Event Type
+                      <span
+                        class="FormLabel__FormLabel__required-text___3mvdm"
+                      >
+                        (
+                        required
+                        )
+                      </span>
+                    </label>
+                  </div>
+                  <div
+                    class="TextInput__TextInput___36-K- TextInput__TextInput--full___1EJEW"
+                  >
+                    <input
+                      class="TextInput__TextInput__input___27vDB a11y__focus-border--default___60AXp"
+                      data-test-id="cf-ui-text-input"
+                      id="eventType"
+                      name="eventType"
+                      required=""
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-10wjke7"
+              >
+                <div
+                  class="TextField__TextField___Sf6eo TextField__TextField--full___11DBK"
                   data-test-id="button-text-input-0"
                 >
                   <div
@@ -360,6 +438,84 @@ exports[`Config When there is an empty webhook Should match snapshot 1`] = `
                       data-test-id="cf-ui-text-input"
                       id="webhookUrl"
                       name="webhookUrl"
+                      required=""
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-10wjke7"
+              >
+                <div
+                  class="TextField__TextField___Sf6eo TextField__TextField--full___11DBK"
+                  data-test-id="auth-token-input-0"
+                >
+                  <div
+                    class="TextField__TextField__label-wrapper___2-MJT"
+                  >
+                    <label
+                      class="FormLabel__FormLabel___3d6zQ"
+                      data-test-id="cf-ui-form-label"
+                      for="authToken"
+                    >
+                      Auth Token
+                      <span
+                        class="FormLabel__FormLabel__required-text___3mvdm"
+                      >
+                        (
+                        required
+                        )
+                      </span>
+                    </label>
+                  </div>
+                  <div
+                    class="TextInput__TextInput___36-K- TextInput__TextInput--full___1EJEW"
+                  >
+                    <input
+                      class="TextInput__TextInput__input___27vDB a11y__focus-border--default___60AXp"
+                      data-test-id="cf-ui-text-input"
+                      id="authToken"
+                      name="authToken"
+                      required=""
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-10wjke7"
+              >
+                <div
+                  class="TextField__TextField___Sf6eo TextField__TextField--full___11DBK"
+                  data-test-id="event-type-input-0"
+                >
+                  <div
+                    class="TextField__TextField__label-wrapper___2-MJT"
+                  >
+                    <label
+                      class="FormLabel__FormLabel___3d6zQ"
+                      data-test-id="cf-ui-form-label"
+                      for="eventType"
+                    >
+                      GitHub Event Type
+                      <span
+                        class="FormLabel__FormLabel__required-text___3mvdm"
+                      >
+                        (
+                        required
+                        )
+                      </span>
+                    </label>
+                  </div>
+                  <div
+                    class="TextInput__TextInput___36-K- TextInput__TextInput--full___1EJEW"
+                  >
+                    <input
+                      class="TextInput__TextInput__input___27vDB a11y__focus-border--default___60AXp"
+                      data-test-id="cf-ui-text-input"
+                      id="eventType"
+                      name="eventType"
                       required=""
                       value=""
                     />

@@ -11,6 +11,7 @@ import Select from './Select';
 const copy = {
   noWebhooks: "There is no webhook configured in the app's configuration",
   noWebhookUrl: 'No webhook URL is configured',
+  noAuthToken: 'No auth token is configured',
   triggerFailed: 'Trigger failed',
   triggerSucceeded: 'Trigger succeeded',
   triggerWebhook: 'Trigger webhook',
@@ -57,19 +58,26 @@ function Sidebar({ sdk }: SidebarProps): React.ReactElement {
   const dropdownItems = webhooks.map(({ name }, index) => ({
     label: name || `Webhook ${index + 1}`,
   }));
-  const { webhookUrl } = webhook;
+  const { webhookUrl, authToken, eventType, name } = webhook;
 
   async function handleClick() {
     setError(false);
     setLoading(true);
     setSuccess(false);
 
-    if (!webhookUrl) {
+    if (!webhookUrl || !authToken || !eventType) {
       return;
     }
 
+    const data = { event_type: eventType };
+
     const response = await fetch(webhookUrl, {
       method: 'POST',
+      headers: {
+        Authorization: authToken,
+        Accept: 'application/vnd.github.v3+json',
+      },
+      body: JSON.stringify(data),
     });
 
     setLoading(false);
@@ -106,17 +114,22 @@ function Sidebar({ sdk }: SidebarProps): React.ReactElement {
       </Row>
       {!webhookUrl && (
         <StyledNote noteType="warning" testId="no-webhook-url-note">
-          {copy.noWebhookUrl}
+          {copy.noWebhookUrl}: {name}
+        </StyledNote>
+      )}
+      {!authToken && (
+        <StyledNote noteType="warning" testId="no-auth-token-note">
+          {copy.noAuthToken}: {name}
         </StyledNote>
       )}
       {success && (
         <StyledNote noteType="positive" testId="success-note">
-          {copy.triggerSucceeded}
+          {copy.triggerSucceeded}: {name}
         </StyledNote>
       )}
       {error && (
         <StyledNote noteType="negative" testId="failure-note">
-          {copy.triggerFailed}
+          {copy.triggerFailed}: {name}
         </StyledNote>
       )}
     </Container>
